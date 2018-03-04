@@ -14,5 +14,5 @@
 - hdfs dfs -mkdir /spark-logs 
 
 ### COMMAND
-su -l hadoop
- hdfs namenode -format && start-dfs.sh && start-yarn.sh &&  hdfs dfs -mkdir /spark-logs
+- su -l hadoop
+- hdfs namenode -format && start-dfs.sh && start-yarn.sh &&  hdfs dfs -mkdir /spark-logs
