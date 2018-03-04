@@ -73,6 +73,8 @@ RUN echo export SPARK_HOME=/home/hadoop/spark >> /home/hadoop/.profile
 RUN echo export LD_LIBRARY_PATH=/home/hadoop/hadoop/lib/native:$LD_LIBRARY_PATH >> /home/hadoop/.profile
 COPY ./spark-conf /home/hadoop/spark/conf
 RUN chown -R hadoop /home/hadoop/spark
+COPY ./start.sh /usr/local/bin/start.sh
+COPY ./startNodes.sh /usr/local/bin/startNodes.sh
 # PYTHON
 #ENV PYTHON_ENV env
 #ENV PYSPARK_PYTHON $SPARK_HOME/$PYTHON_ENV/bin/python

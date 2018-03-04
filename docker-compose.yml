@@ -4,23 +4,23 @@ services:
     build: .
     networks:
       - webnet
-    command:
-      top -b
+    command: start.sh
     ports:
       - "8081:50700"
       - "8082:8088"
       - "8083:18080"
+    depends_on:
+      - node1
+      - node2
   node1:
     build: .
     networks:
       - webnet
-    command:
-      top -b
+    command: startNodes.sh
   node2:
     build: .
     networks:
       - webnet
-    command:
-      top -b
-networks:
+    command: startNodes.sh
+networks:  
   webnet:
