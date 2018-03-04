@@ -1,0 +1,26 @@
+version: '2'
+services:
+  node-master:
+    build: .
+    networks:
+      - webnet
+    command:
+      top -b
+    ports:
+      - "8081:50700"
+      - "8082:8088"
+      - "8083:18080"
+  node1:
+    build: .
+    networks:
+      - webnet
+    command:
+      top -b
+  node2:
+    build: .
+    networks:
+      - webnet
+    command:
+      top -b
+networks:
+  webnet:
