@@ -1,26 +1,35 @@
 version: '2'
 services:
-  node-master:
+  spark-master:
     build: .
     networks:
       - webnet
     command: start.sh
     ports:
-      - "8081:50700"
-      - "8082:8088"
-      - "8083:18080"
+      - "8020:8020"
+      - "8030:8030"
+      - "8032:8032"
+      - "8033:8033"
+      - "8034:8034"
+      - "8035:8035"
+      - "8088:8088"
+      - "18080:18080"
     depends_on:
-      - node1
-      - node2
-  node1:
+      - spark-worker-1
+      - spark-worker-2
+  spark-worker-1:
     build: .
     networks:
       - webnet
     command: startNodes.sh
-  node2:
+    ports:
+      - "8036:8042"
+  spark-worker-2:
     build: .
     networks:
       - webnet
     command: startNodes.sh
-networks:  
+    ports:
+      - "8037:8042"
+networks:
   webnet:

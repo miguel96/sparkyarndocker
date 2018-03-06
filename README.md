@@ -6,12 +6,12 @@
 ## START HDFS
 - hdfs namenode -format
 - start-dfs.sh -> stop-dfs.sh
-- Monitor: http://node-master-IP:50070
+- Monitor: http://spark-master-IP:50070
 ## START YARN
 - start-yarn.sh
-- Monitor: http://node-master-IP:8088
+- Monitor: http://spark-master-IP:8088
 ## SPARK
-- hdfs dfs -mkdir /spark-logs 
+- hdfs dfs -mkdir /spark-logs
 
 ### COMMAND
 - su -l hadoop
