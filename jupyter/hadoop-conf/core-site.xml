@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+    <configuration>
+        <property>
+            <name>fs.defaultFS</name>
+            <value>hdfs://spark-master:8020</value>
+        </property>
+
+        <property>
+             <name>hadoop.security.authorization</name>
+             <value>false</value>
+        </property>
+
+        <property>
+            <name>hadoop.security.authentication</name>
+            <value>simple</value>
+        </property>
+    </configuration>

@@ -50,6 +50,6 @@
 
   <property>
         <name>yarn.nodemanager.disk-health-checker.max-disk-utilization-per-disk-percentage</name>
-        <value>100.0</value>
+        <value>98.5</value>
   </property>
 </configuration>

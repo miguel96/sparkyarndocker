@@ -86,7 +86,7 @@ RUN mkdir /home/hadoop/hadoop/logs/userlogs
 
 # PYTHON
 RUN apt-get update \
- && apt-get install -y python python-pip   pandoc \
+ && apt-get install -y python python-pip   pandoc python-dev \
  && apt-get clean \
  && rm -rf /var/lib/apt/lists/*
 WORKDIR $SPARK_HOME/python

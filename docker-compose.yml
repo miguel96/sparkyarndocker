@@ -31,5 +31,13 @@ services:
     command: startNodes.sh
     ports:
       - "8037:8042"
+  jupyter:
+    build: ./jupyter/
+    networks:
+      - webnet
+    ports:
+     - "8888:8888"
+    environment:
+      - PYSPARK_PYTHON=/usr/bin/python2.7
 networks:
   webnet:
